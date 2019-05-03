@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Settings
+    </ion-title>
+    <ion-icon id="setIcon" name="settings" slot="end"></ion-icon>
+    <ion-button (click)="logout()" routerlink="login" slot="end">Logout<ion-icon name="log-out"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content no-bounce>
+  <ion-item class="titles">
+      <ion-label>User Data</ion-label>
+  </ion-item>
+  <ion-item>
+      <ion-input (change)="nameChange()" type = "text" [(ngModel)]="name" name="Name" placeholder="Name" class="textinput"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label>My Birthday</ion-label>
+    <ion-datetime (ionChange)="dateTimeChange()" displayFormat="DDDD MMM D, YYYY"  max = "2019" [(ngModel)]="time"></ion-datetime>
+  </ion-item>
+
+  <ion-item class="titles">
+      <ion-label>User Settings</ion-label>
+  </ion-item>
+  <ion-item>
+      <ion-label>Show Notifications</ion-label><ion-toggle (ionChange)="shownNoteChange()" [(ngModel)] = "notification"></ion-toggle>
+  </ion-item>
+  <ion-item button="true" (click)="clearData()">
+    <ion-label>Clear User Data</ion-label>
+  </ion-item>
+</ion-content>

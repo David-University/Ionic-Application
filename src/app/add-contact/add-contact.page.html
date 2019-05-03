@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add Contact</ion-title>
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-button slot="end" color="success" (click)="save()">Save</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding no-bounce>
+
+  <ion-item-group>
+
+    <ion-item-divider>
+        <ion-label>Contact Details</ion-label>
+    </ion-item-divider>
+
+    <ion-item>
+        <ion-input (change)="nameChange()" placeholder="Name" [(ngModel)]="name" class="textinput" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input (change)="phoneChange()" type="tel"  maxlength="15" [(ngModel)]="phone" name="Name" placeholder="Phone"class="textinput"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Birthday</ion-label>
+      <ion-datetime (ionChange)="dateTimeChange()" displayFormat="DDDD MMM D, YYYY" min="1900" [(ngModel)]="time" value="2019-01-01"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Favourite</ion-label><ion-toggle (ionChange)="shownNoteChange()" [(ngModel)] = "notification"></ion-toggle>
+    </ion-item>
+
+    <ion-item-divider>
+      <ion-label>Social Media</ion-label>
+    </ion-item-divider>
+
+    <ion-item>
+      <ion-label>Facebook</ion-label>
+      <ion-input (change)="nameChange()" type = "text" [(ngModel)]="facebook" name="Name" placeholder="Facebook address" class="textinput"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>Twitter</ion-label>
+        <ion-input (change)="nameChange()" type = "text" [(ngModel)]="twitter" name="Name" placeholder="Twitter handle" class="textinput"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>Youtube</ion-label>
+        <ion-input (change)="nameChange()" type = "text" [(ngModel)]="youtube" name="Name" placeholder="Youtube Channel" class="textinput"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>Instagram</ion-label>
+        <ion-input (change)="nameChange()" type = "text" [(ngModel)]="instagram" name="Name" placeholder="Instagram handle" class="textinput"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>SnapChat</ion-label>
+        <ion-input (change)="nameChange()" type = "text" [(ngModel)]="snapchat" name="Name" placeholder="SnapChat name" class="textinput"></ion-input>
+    </ion-item>
+  </ion-item-group>
+</ion-content>

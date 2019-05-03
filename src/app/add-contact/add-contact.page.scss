@@ -1,0 +1,40 @@
+ion-header{
+    --ion-background-color: #9096a0 !important;
+}
+  
+ion-content{
+    --ion-background-color: #a0a0a0!important;
+}
+  
+ion-toolbar{
+    --background:#9096a0;
+}
+
+ion-input{
+    --color:white;
+    --placeholder-opacity: 0.75;
+}
+
+ion-label{
+    --color:black !important;
+}
+
+ion-item-divider{
+    --color:black;
+    font-size:15px;
+    font-weight: bold;
+}
+
+ion-datetime{
+    --color:white;
+    --placeholder-color:white;
+}
+
+ion-item{
+    --color:white;
+}
+
+ion-item-divider{
+    --ion-background-color: #a0a0a0!important;
+    background:#a0a0a0;
+}
